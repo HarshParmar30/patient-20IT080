@@ -13,6 +13,7 @@ public class PatientRecord {
 
 
     public PatientRecord() {
+        
 
     }
 
