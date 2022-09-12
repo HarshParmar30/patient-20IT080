@@ -6,6 +6,7 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
+
 const AddPatientRecord = () => {
   
   const { patientId } = useParams(); 
@@ -25,6 +26,7 @@ const AddPatientRecord = () => {
         setName(response.data.name)
         setAge(response.data.age)
         setId(response.data.patientId)
+        
       })
     }
   }, [])
@@ -33,6 +35,7 @@ const AddPatientRecord = () => {
     if(patientId){
       e.preventDefault();
       axios.put(`http://localhost:8080/patient/${id}`, {
+        
         patientId: id,
         name: name,
         address: address,
@@ -52,6 +55,7 @@ const AddPatientRecord = () => {
       })
       .then((response) => {
         console.log(response)
+        
       });
     }
   }
@@ -73,6 +77,7 @@ const AddPatientRecord = () => {
 
   return (
     <Container>
+    
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label >Id</Form.Label>
@@ -99,6 +104,7 @@ const AddPatientRecord = () => {
         </Button>
       </Form>
       </Container>
+
   )
 }
 
