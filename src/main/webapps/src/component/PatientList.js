@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 const PatientList = () => {
 
   const [students, setStudents] = useState(null);
+  
 
   useEffect(() => {
     axios.get("http://localhost:8080/listPatientRecord").then((response) => {
       console.log(response)
       setStudents(response.data);
+      
       // console.log(students)
     })
     .catch(error => console.log(error));
@@ -36,6 +38,7 @@ const PatientList = () => {
           <th>Name</th>
           <th>Address</th>
           <th>age</th>
+    
         </tr>
       </thead>
       <tbody>
