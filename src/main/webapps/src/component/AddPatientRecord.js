@@ -11,6 +11,8 @@ const AddPatientRecord = () => {
   
   const { patientId } = useParams(); 
   
+  
+  
   const [id, setId] = useState();
   const [name, setName] = useState();
   const [address, setAddress] = useState();
