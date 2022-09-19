@@ -25,8 +25,6 @@ public class PatientRecordController {
     public PatientRecord getPatient(@PathVariable Long id) {
         return patientRecordRepository.findById(id).get();
     }
-
-    
     
     // Delete the student
     @DeleteMapping("/patient/{id}")
