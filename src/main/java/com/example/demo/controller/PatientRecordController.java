@@ -26,6 +26,7 @@ public class PatientRecordController {
     }
 
     
+    
     // Delete the student
     @DeleteMapping("/patient/{id}")
     public List<PatientRecord> deleteStudent(@PathVariable Long id) {
